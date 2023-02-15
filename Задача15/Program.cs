@@ -5,9 +5,8 @@
 // 7 -> да
 // 1 -> нет
 
-Console.WriteLine("Введите цифру деня недели");
-int a = Convert.ToInt32(Console.ReadLine());
-
+Random number = new Random();
+int a = number.Next(1,11);
 switch (a)
 {
     case 1:
@@ -29,9 +28,9 @@ switch (a)
         Console.WriteLine("суббота (выходной)");
         break;
     case 7:
-        Console.WriteLine("воскресенье (выходной)");
+        Console.WriteLine("воскресение (выходной)");
         break;
     default:
-        Console.WriteLine("введите корректный день недели от1 до 7");
+        Console.WriteLine($"{a} (намеренный ввод неверного числа) введите корректный день недели от 1 до 7");
         break;
 }
